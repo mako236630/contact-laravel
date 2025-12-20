@@ -34,23 +34,13 @@ class ContactController extends Controller
             return redirect('/')->withInput();
         }
 
-        $contactData = $request->only([
-            'first_name',
-            'last_name',
-            'gender',
-            'email',
-            'address',
-            'building',
-            'category_id',
-            'detail'
-        ]);
+        $contact = $request->all();
 
-        $tel = $request->tel1 . $request->tel2 . $request->tel3;
-        $request->merge(['tel' => $tel]);
+        $contact['tel'] = $request->tel1 . $request->tel2 . $request->tel3;
 
-        Contact::create($contactData);
+        Contact::create($contact);
 
-        return redirect()->route("contact.thanks");
+        return redirect('/thanks');
     }
 
     public function thanks()
