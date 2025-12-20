@@ -1,0 +1,107 @@
+body {
+    font-family: 'Times New Roman', serif;
+    color: #8b7969;
+    margin: 0;
+}
+
+.header {
+    border-bottom: 1px solid #f4f4f4;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.header__logo {
+    font-size: 32px;
+    font-weight: normal;
+}
+
+.contact-form__content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+.contact-form__heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.contact-form__heading h2 {
+    font-size: 28px;
+    font-weight: normal;
+}
+
+/* 横並び：ラベル30%、入力70% */
+.form__group {
+    display: flex;
+    margin-bottom: 25px;
+    align-items: flex-start;
+}
+
+.form__group-title {
+    width: 30%;
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+.form__label--required {
+    color: #f1a89a;
+    margin-left: 5px;
+}
+
+.form__group-content {
+    width: 70%;
+}
+
+/* 入力欄のデザイン（薄いグレー） */
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background-color: #f4f4f4;
+    color: #8b7969;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+/* 各種レイアウト微調整 */
+.form__input--flex,
+.form__input--tel {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.form__input--radio {
+    padding-top: 10px;
+    display: flex;
+    gap: 20px;
+}
+
+textarea {
+    height: 150px;
+}
+
+/* ボタン：濃いベージュ */
+.form__button {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.form__button-submit {
+    background-color: #8b7969;
+    color: #fff;
+    border: none;
+    padding: 15px 80px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.error {
+    color: red;
+    font-size: 13px;
+    margin: 5px 0;
+}
