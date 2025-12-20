@@ -11,7 +11,7 @@ laravel環境構築
 ・cp .env.example .env 環境変数を適宜変更
 ・php artisan key:generate
 ・php artisan migrate
-・php artisan db:seed
+・php artisan migrate:fresh --seed
 
 開発環境
 ・お問い合わせ画面　http://localhost/
