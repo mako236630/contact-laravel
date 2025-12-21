@@ -19,3 +19,7 @@ Route::get("/", [ContactController::class, "index"])->name("contact.index");
 Route::post("/confirm", [ContactController::class, "confirm"])->name("contact.confirm");
 Route::post("/thanks", [ContactController::class, "store"])->name("contact.store");
 Route::get("/thanks", [ContactController::class, "thanks"])->name("contact.thanks");
+
+Route::middleware("auth")->group(function (){
+    Route::get("/admin", [ContactController::class, "admin"])->name("admin");
+});

@@ -10,7 +10,13 @@
         <h2>login</h2>
     </div>
     <div class="login-form__inner">
-        <form class="form" action="/login" method="post">
+        @if ($errors->has('email') && old('email') && !str_contains($message = $errors->first('email'), '形式'))
+        <p class="error-message" style="text-align: center; margin-bottom: 15px;">
+            {{ $message }}
+        </p>
+        @endif
+
+        <form class="form" action="/login" method="post" novalidate>
             @csrf
 
             <div class="form__group">
@@ -21,8 +27,10 @@
                     <input type="email" name="email" value="{{ old('email') }}" placeholder="例: test@example.com">
                 </div>
                 @error('email')
+                @if(!old('email') || str_contains($message, '形式'))
                 <p class="error-message">{{ $message }}</p>
                 @enderror
+                @endif
             </div>
 
             <div class="form__group">
@@ -35,6 +43,9 @@
                 @error('password')
                 <p class="error-message">{{ $message }}</p>
                 @enderror
+
+                @if($errors->has('email') && old('email'))
+                @endif
             </div>
 
             <div class="form__button">

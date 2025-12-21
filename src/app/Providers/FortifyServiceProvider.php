@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Http\Requests\LoginRequest;
+use Laravel\Fortify\Http\Requests\LoginRequest as FortifyLoginRequest;
 use App\Actions\Fortify\CreateNewUser;
 use App\Actions\Fortify\ResetUserPassword;
 use App\Actions\Fortify\UpdateUserPassword;
@@ -28,6 +30,9 @@ class FortifyServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+
+        $this->app->singleton(FortifyLoginRequest::class, LoginRequest::class);
+
         Fortify::createUsersUsing(CreateNewUser::class);
         Fortify::updateUserProfileInformationUsing(UpdateUserProfileInformation::class);
         Fortify::updateUserPasswordsUsing(UpdateUserPassword::class);
@@ -51,5 +56,7 @@ class FortifyServiceProvider extends ServiceProvider
         Fortify::loginView(function () {
             return view('auth.login');
         });
+
+    
     }
 }

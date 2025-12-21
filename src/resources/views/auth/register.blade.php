@@ -10,7 +10,7 @@
         <h2>Register</h2>
     </div>
     <div class="register-form__inner">
-        <form class="form" action="/register" method="post">
+        <form class="form" action="/register" method="post" novalidate>
             @csrf
             <div class="form__group">
                 <div class="form__group-title">
