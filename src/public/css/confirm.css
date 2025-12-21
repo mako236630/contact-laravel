@@ -1,0 +1,71 @@
+.confirm__container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 10px 20px 100px;
+}
+
+.confirm__title {
+    text-align: center;
+    font-size: 30px;
+    color: #8b7969;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 50px;
+
+}
+
+.confirm-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+
+.confirm-table__row {
+    border-bottom: 1px solid #eee;
+    /* 行の区切り線 */
+}
+
+.confirm-table__header {
+    width: 30%;
+    background-color: #bfb2a7;
+    /* お手本に近いベージュ */
+    color: #fff;
+    text-align: left;
+    padding: 20px 30px;
+    font-weight: normal;
+}
+
+.confirm-table__text {
+    width: 70%;
+    padding: 20px 30px;
+    color: #8b7969;
+    background-color: #fff;
+}
+
+/* ボタンエリア */
+.confirm-form__button {
+    text-align: center;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.btn-submit {
+    background-color: #8b7969;
+    color: #fff;
+    border: none;
+    padding: 12px 60px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-back {
+    background-color: transparent;
+    color: #8b7969;
+    border: none;
+    text-decoration: underline;
+    font-size: 14px;
+    cursor: pointer;
+}
