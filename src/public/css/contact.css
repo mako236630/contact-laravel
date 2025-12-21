@@ -1,17 +1,28 @@
+
+
 .contact__container {
     max-width: 900px;
     margin: 0 auto;
-    padding: 10px 20px 100px;
+    padding: 50px 20px 100px;
+}
+
+.contact__heading {
+    text-align: center;
+    padding-top: 80px;
+    margin-bottom: 40px;
+}
+
+.contact__heading {
+    text-align: center;
+    padding-top: 80px;
+    margin-bottom: 40px;
 }
 
 .contact__title {
-    text-align: center;
     font-size: 30px;
     color: #8b7969;
     font-weight: bold;
-    margin-top: 0px;
-    margin-bottom: 50px;
-
+    margin: 0;
 }
 
 .form-group {

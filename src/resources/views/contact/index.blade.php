@@ -6,7 +6,9 @@
 
 @section('content')
 <div class="contact__container">
-    <h2 class="contact__title">Contact</h2>
+    <div class="contact__heading">
+        <h2 class="contact__title">Contact</h2>
+    </div>
 
     <form action="{{ route('contact.confirm') }}" method="post" novalidate>
         @csrf
@@ -59,9 +61,9 @@
                     <input type="text" name="tel2" placeholder="1234" value="{{ old('tel2') }}"> <span>-</span>
                     <input type="text" name="tel3" placeholder="5678" value="{{ old('tel3') }}">
                 </div>
-                @error('tel1') <div class="error">{{ $message }}</div> @enderror
-                @error('tel2') <div class="error">{{ $message }}</div> @enderror
-                @error('tel3') <div class="error">{{ $message }}</div> @enderror
+                @error('tel')
+                <p class="error-message" style="color: red;">{{ $message }}</p>
+                @enderror
             </div>
         </div>
 
