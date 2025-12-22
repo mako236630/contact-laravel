@@ -5,7 +5,7 @@
 @endsection
 
 @section('header-nav')
-<form action="/login" method="post" class="logout-form">
+<form action="/logout" method="post" class="logout-form">
     @csrf
     <button class="logout-btn" type="submit">logout</button>
 </form>

@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Http\Requests\LoginRequest;
+use Laravel\Fortify\Contracts\LogoutResponse;
 use Laravel\Fortify\Http\Requests\LoginRequest as FortifyLoginRequest;
 use App\Actions\Fortify\CreateNewUser;
 use App\Actions\Fortify\ResetUserPassword;
@@ -55,6 +56,15 @@ class FortifyServiceProvider extends ServiceProvider
 
         Fortify::loginView(function () {
             return view('auth.login');
+        });
+
+        $this->app->singleton(LogoutResponse::class, function () {
+            return new class implements LogoutResponse {
+                public function toResponse($request)
+                {
+                    return redirect('/login'); // ログアウト後に /login へ
+                }
+            };
         });
 
     

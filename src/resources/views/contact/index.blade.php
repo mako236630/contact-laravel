@@ -19,11 +19,11 @@
             </div>
             <div class="form-group__input">
                 <div class="input-flex">
-                    <input type="text" name="first_name" placeholder="例: 山田" value="{{ old('first_name') }}">
-                    <input type="text" name="last_name" placeholder="例: 太郎" value="{{ old('last_name') }}">
+                    <input type="text" name="last_name" placeholder="例: 山田" value="{{ old('last_name') }}">
+                    <input type="text" name="first_name" placeholder="例: 太郎" value="{{ old('first_name') }}">
                 </div>
-                @error('first_name') <div class="error">{{ $message }}</div> @enderror
                 @error('last_name') <div class="error">{{ $message }}</div> @enderror
+                @error('first_name') <div class="error">{{ $message }}</div> @enderror
             </div>
         </div>
 
