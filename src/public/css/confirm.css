@@ -6,6 +6,7 @@
     padding: 10px 20px 100px;
 }
 
+
 .confirm__title {
     text-align: center;
     font-size: 30px;
@@ -16,15 +17,18 @@
 
 }
 
+
 .confirm-table {
     width: 100%;
     border-collapse: collapse;
     border: 1px solid #ddd;
 }
 
+
 .confirm-table__row {
     border-bottom: 1px solid #eee;
 }
+
 
 .confirm-table__header {
     width: 30%;

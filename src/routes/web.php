@@ -23,3 +23,5 @@ Route::get("/thanks", [ContactController::class, "thanks"])->name("contact.thank
 Route::middleware("auth")->group(function (){
     Route::get("/admin", [ContactController::class, "admin"])->name("admin");
 });
+Route::get('/admin/search', [ContactController::class, 'search']);
+Route::delete("/admin/delete/{id}", [ContactController::class, "destroy"]);

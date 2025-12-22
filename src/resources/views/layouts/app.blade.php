@@ -14,6 +14,10 @@
         <div class="header__inner">
             <div class="header__logo">
                 FashionablyLate
+
+                <nav class="header__nav">
+                    @yield('header-nav')
+                </nav>
             </div>
 
             @if (!Request::is('contact'))
