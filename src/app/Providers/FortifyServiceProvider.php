@@ -62,7 +62,7 @@ class FortifyServiceProvider extends ServiceProvider
             return new class implements LogoutResponse {
                 public function toResponse($request)
                 {
-                    return redirect('/login'); // ログアウト後に /login へ
+                    return redirect('/login');
                 }
             };
         });

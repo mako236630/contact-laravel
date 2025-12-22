@@ -46,7 +46,7 @@
         </form>
 
         <div class="admin-table__header-row">
-            <button class="export-btn">エクスポート</button>
+            <button class="export-btn" type="button" onclick="location.href='/admin/export?' + new URLSearchParams(new FormData(document.querySelector('.search-form'))).toString()">エクスポート</button>
             <div class="pagination-wrapper">
                 {{ $contacts->links() }}
             </div>
