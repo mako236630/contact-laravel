@@ -39,7 +39,7 @@ class ContactRequest extends FormRequest
             "tel1" => "numeric|max:5",
             "tel2" => "numeric|max:5",
             "tel3" => "numeric|max:5",
-            "tel" => "required|numeric|digits_between:1,5",
+            "tel" => "required|numeric|digits_between:1,15",
             "address" => "required",
             "building"    => "nullable",
             "category_id" => "required",
