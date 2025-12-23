@@ -20,9 +20,10 @@ Route::post("/confirm", [ContactController::class, "confirm"])->name("contact.co
 Route::post("/thanks", [ContactController::class, "store"])->name("contact.store");
 Route::get("/thanks", [ContactController::class, "thanks"])->name("contact.thanks");
 
-Route::middleware("auth")->group(function (){
+Route::middleware("auth")->group(function () {
     Route::get("/admin", [ContactController::class, "admin"])->name("admin");
 });
 Route::get('/admin/search', [ContactController::class, 'search']);
 Route::delete("/admin/delete/{id}", [ContactController::class, "destroy"]);
-Route::get("/admin/export", [ContactController::class, "export"]);
+Route::get("/export", [ContactController::class, "export"]);
+Route::get('/reset', [ContactController::class, 'admin'])->name('admin.reset');

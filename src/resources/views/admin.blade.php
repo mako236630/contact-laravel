@@ -41,12 +41,12 @@
                 <input type="date" name="date" class="search-form__item-date">
 
                 <button class="search-form__button-submit" type="submit">検索</button>
-                <a href="/admin" class="search-form__button-reset" style="text-decoration: none; display: flex; align-items: center; justify-content: center;">リセット</a>
+                <a href="/reset" class="search-form__button-reset" style="text-decoration: none; display: flex; align-items: center; justify-content: center;">リセット</a>
             </div>
         </form>
 
         <div class="admin-table__header-row">
-            <button class="export-btn" type="button" onclick="location.href='/admin/export?' + new URLSearchParams(new FormData(document.querySelector('.search-form'))).toString()">エクスポート</button>
+            <button class="export-btn" type="button" onclick="location.href='/export?' + new URLSearchParams(new FormData(document.querySelector('.search-form'))).toString()">エクスポート</button>
             <div class="pagination-wrapper">
                 {{ $contacts->links() }}
             </div>

@@ -145,4 +145,9 @@ class ContactController extends Controller
             'Content-Disposition' => 'attachment; filename="contacts.csv"',
         ]);
     }
+
+    public function reset()
+    {
+        return redirect()->route('admin');
+    }
 }

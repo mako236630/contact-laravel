@@ -24,8 +24,15 @@ laravel環境構築</br>
 </br>
 </br>
 </br>
+テスト用ログイン情報</br>
+・php artisan db:seed</br>
+・メールアドレス：test@example.com</br>
+・パスワード：password123
+</br>
+</br>
+</br>
 使用技術</br>
-・PHP 8.1</br>
+・PHP 8.1.33</br>
 ・Laravel 8.83.8</br>
 ・MySQL 8.0.26</br>
 ・nginx 1.21.1
