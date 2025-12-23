@@ -1,0 +1,127 @@
+.contact__container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 35px 20px 100px;
+}
+
+.contact__heading {
+    text-align: center;
+    padding-top: 10px;
+    margin-bottom: 45px;
+}
+
+
+.contact__title {
+    font-size: 30px;
+    color: #8b7969;
+    font-weight: bold;
+    margin: 0;
+}
+
+.form-group {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.form-group__label {
+    width: 30%;
+    padding-top: 10px;
+}
+
+.form-label {
+    font-weight: bold;
+    color: #8b7969;
+}
+
+.required {
+    color: #ff0000 !important;
+    margin-left: 5px;
+}
+
+.form-group__input {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: #f4f4f4;
+    border: none;
+    color: #8b7969;
+}
+
+textarea {
+    height: 120px;
+}
+
+.input-flex {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.input-flex input {
+    flex: 1;
+    width: 0;
+    min-width: 0;
+}
+
+.radio-group label {
+    margin-right: 60px;
+    flex: none;
+}
+
+.tel-group input {
+    flex: 1;
+}
+
+.tel-group span {
+    color: #8b7969;
+    padding: 0 1px;
+}
+
+.error {
+    color: #ff0000;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.form__button {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.btn-confirm {
+    background-color: #8b7969;
+    color: #fff;
+    border: none;
+    padding: 15px 80px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="radio"] {
+    accent-color: #8b7969;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: #f4f4f4;
+    border: none;
+    color: #8b7969;
+    box-sizing: border-box;
+}
