@@ -14,7 +14,7 @@
             <tr class="confirm-table__row">
                 <th class="confirm-table__header">お名前</th>
                 <td class="confirm-table__text">
-                    {{ $data['first_name'] }} {{ $data['last_name'] }}
+                    {{ $data['last_name'] }} {{ $data['first_name'] }}
                 </td>
             </tr>
             <tr class="confirm-table__row">
